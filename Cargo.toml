@@ -51,8 +51,8 @@ overflow-checks = false # <-
 
 # uncomment this to switch from the crates.io version of defmt to its git version
 # check app-template's README for instructions
-# [patch.crates-io]
-# defmt = { git = "https://github.com/knurling-rs/defmt", rev = "use defmt version reported by `probe-run --version`" }
-# defmt-rtt = { git = "https://github.com/knurling-rs/defmt", rev = "use defmt version reported by `probe-run --version`" }
-# defmt-test = { git = "https://github.com/knurling-rs/defmt", rev = "use defmt version reported by `probe-run --version`" }
-# panic-probe = { git = "https://github.com/knurling-rs/defmt", rev = "use defmt version reported by `probe-run --version`" }
+[patch.crates-io]
+defmt = { git = "https://github.com/knurling-rs/defmt", rev = "c4461eb148461e54d9a1e203cf01393f07ce84f0" }
+defmt-rtt = { git = "https://github.com/knurling-rs/defmt", rev = "c4461eb148461e54d9a1e203cf01393f07ce84f0" }
+defmt-test = { git = "https://github.com/knurling-rs/defmt", rev = "c4461eb148461e54d9a1e203cf01393f07ce84f0" }
+panic-probe = { git = "https://github.com/knurling-rs/defmt", rev = "c4461eb148461e54d9a1e203cf01393f07ce84f0" }
