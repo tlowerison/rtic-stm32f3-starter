@@ -1,6 +1,6 @@
 [package]
 authors = ["Trey Lowerison <19714082+tlowerison@users.noreply.github.com>"]
-name = "rtic-stm32f3-starter"
+name = "rtic-stm32f3-template"
 edition = "2018"
 version = "0.1.0"
 description = "Use `DEFMT_LOG=trace cargo run` to see logs."
