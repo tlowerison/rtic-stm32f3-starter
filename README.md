@@ -12,7 +12,7 @@ Based on https://github.com/rtic-rs/defmt-app-template
 
 ### Setup
 
-```console
+```
 cargo install flip-link
 cargo install probe-run
 cargo install cargo-generate
