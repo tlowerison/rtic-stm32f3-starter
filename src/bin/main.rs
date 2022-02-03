@@ -1,7 +1,7 @@
 #![no_main]
 #![no_std]
 
-use rtic_stm32f3_template as _; // global logger + panicking behavior + memory layout
+use {{crate_name}} as _; // global logger + panicking behavior + memory layout
 
 #[rtic::app(device = stm32f3xx_hal::pac, peripherals = true, dispatchers = [EXTI0, EXTI1])]
 mod app {

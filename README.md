@@ -6,7 +6,7 @@
 Project starter for the STM32F3 microcontroller.
 
 > Quickly set up a [`probe-run`] + [`defmt`] + [`flip-link`] embedded project
-> running on the [`RTIC`] scheduler
+> running on the [`RTIC`] scheduler on a STM32F3 microcontroller.
 
 Based on https://github.com/rtic-rs/defmt-app-template
 
