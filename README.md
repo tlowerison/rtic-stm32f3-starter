@@ -17,7 +17,7 @@ cargo install flip-link
 cargo install probe-run
 cargo install cargo-generate
 cargo generate \
-    --git https://github.com/tlowerison/rtic-stm32f3-template \
+    --git https://github.com/tlowerison/stm32f3-template \
     --branch main \
     --name my-app
 ```
