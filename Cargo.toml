@@ -1,20 +1,26 @@
 [package]
-# TODO(1) fix `authors` and `name` if you didn't use `cargo-generate`
-authors = ["{{authors}}"]
-name = "{{project-name}}"
+authors = ["Trey Lowerison <19714082+tlowerison@users.noreply.github.com>"]
+name = "rtic-stm32f3-starter"
 edition = "2018"
 version = "0.1.0"
-
-[workspace]
-members = ["testsuite"]
+description = "Use `DEFMT_LOG=trace cargo run` to see logs."
 
 [dependencies]
-defmt = "0.3.0"
-defmt-rtt = "0.3.0"
-panic-probe = { version = "0.3.0", features = ["print-defmt"] }
+cortex-m = "0.7.4"
+cortex-m-rt = "0.7.1"
 cortex-m-rtic = "1"
-# TODO(4) enter your HAL here
-# some-hal = "1.2.3"
+defmt = "0.3.0"
+defmt-rtt = "0.3.1"
+dwt-systick-monotonic = "1.0.0"
+fugit = "0.3.3"
+panic-probe = { version = "0.3.0", features = ["print-defmt"] }
+
+# This revision has version `0.8.1` and, importantly,
+# uses cortex-m-rt `0.7` which allows to use defmt `0.3`.
+[dependencies.stm32f3xx-hal]
+git = "https://github.com/stm32-rs/stm32f3xx-hal.git"
+rev = "e069b0ed2790a34522c97c5dfcf19e72fbc83146"
+features = ["ld", "rt", "stm32f303xc"]
 
 # cargo build/run
 [profile.dev]
