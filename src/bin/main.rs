@@ -30,7 +30,7 @@ mod app {
         (
             Shared {},
             Local {},
-            init::Monotonics(mono(ctx.core, ctx.device)),
+            init::Monotonics(init_mono(ctx.core, ctx.device)),
         )
     }
 
@@ -45,7 +45,7 @@ mod app {
         task1::spawn_after(Duration::<u32, 1, CLOCK_FREQ>::millis(125)).unwrap();
     }
 
-    fn mono(mut cp: CorePeripherals, dp: DevicePeripherals) -> Mono {
+    fn init_mono(mut cp: CorePeripherals, dp: DevicePeripherals) -> Mono {
         cp.DCB.enable_trace();
         cp.DWT.enable_cycle_counter();
 
