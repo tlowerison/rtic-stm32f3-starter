@@ -13,13 +13,13 @@ use {{crate_name}} as _; // global logger + panicking behavior + memory layout
 mod app {
     use super::*;
 
+    const CLOCK_FREQ: u32 = 8_000_000; // 8 MHz
+
     #[shared]
     struct Shared {}
 
     #[local]
     struct Local {}
-
-    const CLOCK_FREQ: u32 = 8_000_000; // 8 MHz
 
     #[monotonic(binds = SysTick, default = true)]
     type Mono = DwtSystick<CLOCK_FREQ>;
